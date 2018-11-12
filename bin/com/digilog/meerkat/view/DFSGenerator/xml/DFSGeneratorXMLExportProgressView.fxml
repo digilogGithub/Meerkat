@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digilog.meerkat.view.DFSGenerator.xml.DFSGeneratorXMLExportProgressViewController">
+   <children>
+      <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="EXPORT DFS CONFIGURATION XML FILE LIST" GridPane.columnSpan="3" GridPane.rowSpan="11">
+         <content>
+            <TreeTableView fx:id="dfsFileListTreeView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <columns>
+                  <TreeTableColumn fx:id="databaseSourceTagNameTreeColumn" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" text="DB Source Name &amp; DataTag" />
+                  <TreeTableColumn fx:id="AliasTreeColumn" maxWidth="1.7976931348623157E308" minWidth="230.0" prefWidth="-1.0" text="Alias Name" />
+                  <TreeTableColumn fx:id="dfsDoneTreeColumn" maxWidth="55.0" minWidth="45.0" prefWidth="-1.0" text="Done" />
+               </columns>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </content>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="12.0" left="12.0" right="6.0" top="12.0" />
+         </GridPane.margin>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="EXPORT eDataLyzer CONFIGURATION &amp; DATABASE INFO XML LIST FILE" GridPane.columnIndex="3" GridPane.columnSpan="6" GridPane.rowSpan="8">
+         <content>
+            <TableView fx:id="configFileListTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="configListTableColumn" maxWidth="320.0" minWidth="180.0" prefWidth="-1.0" text="Config List" />
+                  <TableColumn fx:id="filePathTableColumn" maxWidth="1.7976931348623157E308" minWidth="490.0" prefWidth="-1.0" text="Config XML File Path" />
+                  <TableColumn fx:id="configDoneTableColumn" maxWidth="55.0" minWidth="45.0" prefWidth="-1.0" text="Done" />
+               </columns>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TableView>
+         </content>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="6.0" right="12.0" top="12.0" />
+         </GridPane.margin>
+      </TitledPane>
+      <Button fx:id="Back_Button" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handle_Back" text="&lt; Back" GridPane.columnIndex="6" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets bottom="7.0" left="10.0" right="6.0" top="2.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="Export_Button" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handle_Export" text="Export XML" GridPane.columnIndex="7" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets bottom="7.0" left="6.0" right="6.0" top="2.0" />
+         </GridPane.margin>
+      </Button>
+      <ProgressBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" progress="0.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="10" fx:id="xmlProgressBar">
+         <GridPane.margin>
+            <Insets bottom="11.0" left="6.0" top="7.0" />
+         </GridPane.margin>
+      </ProgressBar>
+      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Export XML Progress" GridPane.columnIndex="3" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Button fx:id="Cancel_Button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handle_Cancel" text="Cancel" GridPane.columnIndex="8" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets bottom="7.0" left="5.0" right="12.0" top="2.0" />
+         </GridPane.margin>
+      </Button>
+      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="4" GridPane.rowIndex="9" fx:id="xmlProgressPer">
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <CheckBox fx:id="onlyDFS" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handle_onlyDFS" text="Only DFS Configuration " GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="32.0" top="5.0" />
+         </GridPane.margin>
+      </CheckBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="131.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="131.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="131.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="150.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="131.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="131.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="115.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="115.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="115.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="54.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="54.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="54.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="54.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="54.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="54.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="35.0" minHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="40.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</GridPane>

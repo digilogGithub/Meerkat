@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="800.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digilog.meerkat.view.DFSGenerator.crawler.DFSGeneratorTableDetailConfigEditController">
+   <children>
+      <TitledPane expanded="false" maxHeight="200.0" maxWidth="1.7976931348623157E308" text="TABLE INFOMATION PREVIEW" wrapText="true" VBox.vgrow="NEVER">
+         <content>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <GridPane layoutX="114.0" layoutY="-35.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Table Format" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="DFS Data Tag Name" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="4.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Alias Name" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="4.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Type X Level" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="DFSDataTagNameField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="aliasNameField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="7">
+                           <GridPane.margin>
+                              <Insets bottom="4.0" left="4.0" top="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="tableFormatField" disable="true" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="4.0" left="4.0" top="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <CheckBox disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Create MDM Table" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets left="4.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <TextField fx:id="typeLevelField" disable="true" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="4.0" left="4.0" top="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <CheckBox disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Create DFS VIEW" GridPane.columnIndex="6">
+                           <GridPane.margin>
+                              <Insets left="2.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <TreeTableView fx:id="DFSMethod_treeTableView" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnSpan="4" GridPane.rowSpan="3">
+                           <columns>
+                              <TreeTableColumn maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="dfsmethod" />
+                              <TreeTableColumn fx:id="hint" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="-1.0" sortable="false" text="hint" />
+                              <TreeTableColumn fx:id="temptable" prefWidth="75.0" sortable="false" text="temptable" />
+                              <TreeTableColumn fx:id="temptable_keycolumn" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="-1.0" sortable="false" text="temptable_keycolumn" />
+                              <TreeTableColumn fx:id="prefix" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" sortable="false" text="prefix" />
+                              <TreeTableColumn fx:id="postfix" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" sortable="false" text="postfix" />
+                              <TreeTableColumn fx:id="join" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="-1.0" sortable="false" text="join" />
+                              <TreeTableColumn fx:id="condition" maxWidth="1.7976931348623157E308" minWidth="70.0" prefWidth="-1.0" sortable="false" text="condition" />
+                           </columns>
+                        </TreeTableView>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="155.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="35.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane maxHeight="180.0" maxWidth="1.7976931348623157E308" text="NEXTATTRIBUTE DFSVARIABLES" wrapText="true">
+         <content>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <TableView fx:id="DFS_NEXTATTRIBUTE_TableView" editable="true" layoutX="10.0" layoutY="10.0" maxHeight="200.0" maxWidth="1.7976931348623157E308" minHeight="150.0" onMouseClicked="#handle_nextAttributeTable_click" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="n_useColumn" maxWidth="70.0" minWidth="50.0" prefWidth="-1.0" resizable="false" text="Not Opt" />
+                        <TableColumn fx:id="n_dfs_variable_name" maxWidth="1.7976931348623157E308" minWidth="105.0" prefWidth="-1.0" sortable="false" text="name" />
+                        <TableColumn fx:id="n_column_name" maxWidth="1.7976931348623157E308" minWidth="105.0" prefWidth="-1.0" sortable="false" text="column" />
+                        <TableColumn fx:id="n_table_name" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="-1.0" sortable="false" text="table" />
+                        <TableColumn fx:id="n_variable_type" maxWidth="1.7976931348623157E308" minWidth="85.0" prefWidth="-1.0" text="variable_type" />
+                        <TableColumn fx:id="n_variable_group" maxWidth="1.7976931348623157E308" minWidth="95.0" prefWidth="-1.0" text="variable_group" />
+                        <TableColumn fx:id="n_role" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" resizable="false" text="role" />
+                        <TableColumn fx:id="n_pivot" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="pivot" />
+                        <TableColumn maxWidth="-1.0" minWidth="200.0" prefWidth="-1.0" text="TIME &amp; NUMBER FORMAT">
+                           <columns>
+                              <TableColumn fx:id="n_totime_javaformat" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="-1.0" sortable="false" text="totime_javaformat" />
+                              <TableColumn fx:id="n_totime" maxWidth="1.7976931348623157E308" minWidth="345.0" prefWidth="-1.0" sortable="false" text="totime" />
+                              <TableColumn fx:id="n_timetochar" maxWidth="1.7976931348623157E308" minWidth="310.0" prefWidth="-1.0" sortable="false" text="timetochar" />
+                              <TableColumn fx:id="n_numbertochar" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" sortable="false" text="numbertochar" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="n_groupby" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" sortable="false" text="groupby" />
+                        <TableColumn fx:id="n_summarization" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0" sortable="false" text="summarization" />
+                        <TableColumn fx:id="n_exclude_condition" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0" sortable="false" text="exclude_condition" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="nextAttributeMenu">
+                          <items>
+                              <MenuItem fx:id="nextAdd" mnemonicParsing="false" onAction="#handle_AddVariable" text="Add Variable" />
+                              <Menu fx:id="nextDeleteMenu" mnemonicParsing="false" text="Delete Variable...">
+                                <items>
+                                  <MenuItem fx:id="nextDelete" mnemonicParsing="false" onAction="#handle_mouse_nextDelete" text="selected Variable" />
+                                  <MenuItem fx:id="nextAllLinkedDelete" mnemonicParsing="false" onAction="#handle_mouse_nextAllLinkedDelete" text="ALL Linked Variables" />
+                                </items>
+                              </Menu>
+                              <SeparatorMenuItem fx:id="nextSepMenu" mnemonicParsing="false" />
+                              <Menu fx:id="nextCopyMenu" mnemonicParsing="false" text="Copy to...">
+                                <items>
+                                  <MenuItem fx:id="nextCopyToContext" mnemonicParsing="false" onAction="#handle_mouse_nextCopyToContext" text="CONTEXTLIST" />
+                                    <MenuItem fx:id="nextCopyToMeta" mnemonicParsing="false" onAction="#handle_mouse_nextCopyToMETA" text="METADATA" />
+                                </items>
+                              </Menu>
+                              <Menu fx:id="nextUnlinkMenu" mnemonicParsing="false" text="Unlink Variable...">
+                                <items>
+                                  <MenuItem fx:id="nextSeletedVariable" mnemonicParsing="false" onAction="#handle_unlink_nextSelectedVariable" text="Seleted Variable" />
+                                    <MenuItem fx:id="nextAllVariables" mnemonicParsing="false" onAction="#handle_unlink_nextAllVariable" text="All NEXTATTRIBUTE Variables" />
+                                </items>
+                              </Menu>
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane maxHeight="300.0" maxWidth="1.7976931348623157E308" text="CONTEXTLIST DFSVARIABLES">
+         <content>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <TableView fx:id="DFS_CONTEXTLIST_TableView" editable="true" layoutX="9.0" maxHeight="270.0" maxWidth="1.7976931348623157E308" minHeight="220.0" onMouseClicked="#handle_contextListTable_click" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="c_useColumn" maxWidth="70.0" minWidth="50.0" prefWidth="-1.0" resizable="false" text="Not Opt" />
+                        <TableColumn fx:id="c_dfs_variable_name" maxWidth="1.7976931348623157E308" minWidth="105.0" prefWidth="-1.0" sortable="false" text="name" />
+                        <TableColumn fx:id="c_column_name" maxWidth="1.7976931348623157E308" minWidth="105.0" prefWidth="-1.0" sortable="false" text="column" />
+                        <TableColumn fx:id="c_table_name" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="-1.0" sortable="false" text="table" />
+                        <TableColumn fx:id="c_variable_type" maxWidth="1.7976931348623157E308" minWidth="85.0" prefWidth="-1.0" text="variable_type" />
+                        <TableColumn fx:id="c_variable_group" maxWidth="1.7976931348623157E308" minWidth="95.0" prefWidth="-1.0" text="variable_group" />
+                        <TableColumn fx:id="c_role" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" text="role" />
+                        <TableColumn fx:id="c_pivot" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="pivot" />
+                        <TableColumn maxWidth="-1.0" minWidth="200.0" prefWidth="-1.0" text="TIME &amp; NUMBER FORMAT">
+                           <columns>
+                              <TableColumn fx:id="c_totime_javaformat" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="-1.0" sortable="false" text="totime_javaformat" />
+                              <TableColumn fx:id="c_totime" maxWidth="1.7976931348623157E308" minWidth="345.0" prefWidth="-1.0" sortable="false" text="totime" />
+                              <TableColumn fx:id="c_timetochar" maxWidth="1.7976931348623157E308" minWidth="310.0" prefWidth="-1.0" sortable="false" text="timetochar" />
+                              <TableColumn fx:id="c_numbertochar" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" sortable="false" text="numbertochar" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="c_groupby" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" sortable="false" text="groupby" />
+                        <TableColumn fx:id="c_summarization" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0" sortable="false" text="summarization" />
+                        <TableColumn fx:id="c_exclude_condition" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0" sortable="false" text="exclude_condition" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextMenu">
+                          <items>
+                              <MenuItem fx:id="conAdd" mnemonicParsing="false" onAction="#handle_AddVariable" text="Add Variable" />
+                              <Menu fx:id="conDeleteMenu" mnemonicParsing="false" text="Delete Variable...">
+                                <items>
+                                    <MenuItem fx:id="conDelete" mnemonicParsing="false" onAction="#handle_mouse_conDelete" text="Selected Variable" />
+                                  <MenuItem fx:id="conAllLinkedDelete" mnemonicParsing="false" onAction="#handle_mouse_conAllLinkedDelete" text="All Linked Variables" />
+                                </items>
+                              </Menu>
+                              <SeparatorMenuItem fx:id="conSepMenu" mnemonicParsing="false" />
+                              <Menu fx:id="conCopyMenu" mnemonicParsing="false" text="Copy to...">
+                                <items>
+                                  <MenuItem fx:id="conCopyToNext" mnemonicParsing="false" onAction="#handle_mouse_conCopyToNext" text="NEXTATTRIBUTE" />
+                                  <MenuItem fx:id="conCopyToMeta" mnemonicParsing="false" onAction="#handle_mouse_conCopyToMETA" text="METADATA" />
+                                </items>
+                              </Menu>
+                              <Menu fx:id="conUnlinkMenu" mnemonicParsing="false" text="Unlink Variable...">
+                                 <items>
+                                    <MenuItem fx:id="conSeletedVariable" mnemonicParsing="false" onAction="#handle_unlink_conSelectedVariable" text="Seleted Variable" />
+                                    <MenuItem fx:id="conAllVariables" mnemonicParsing="false" onAction="#handle_unlink_conAllVariable" text="All CONTEXTLIST Variables" />
+                                 </items>
+                              </Menu>
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="METADATA DFSVARIABLES" VBox.vgrow="SOMETIMES">
+         <content>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <TableView fx:id="DFS_METADATA_TableView" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#handle_metaDataTable_click" onSort="#handle_metaDataTable_click" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="m_useColumn" maxWidth="70.0" minWidth="50.0" prefWidth="-1.0" resizable="false" text="Not Opt" />
+                        <TableColumn fx:id="m_dfs_variable_name" maxWidth="1.7976931348623157E308" minWidth="105.0" prefWidth="-1.0" text="name" />
+                        <TableColumn fx:id="m_column_name" maxWidth="1.7976931348623157E308" minWidth="105.0" prefWidth="-1.0" text="column" />
+                        <TableColumn fx:id="m_table_name" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="-1.0" sortable="false" text="table" />
+                        <TableColumn fx:id="m_variable_type" maxWidth="1.7976931348623157E308" minWidth="85.0" prefWidth="-1.0" text="variable_type" />
+                        <TableColumn fx:id="m_variable_group" maxWidth="1.7976931348623157E308" minWidth="95.0" prefWidth="-1.0" text="variable_group" />
+                        <TableColumn fx:id="m_role" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" text="role" />
+                        <TableColumn fx:id="m_pivot" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="pivot" />
+                        <TableColumn fx:id="m_timeAndNumberFormat" maxWidth="-1.0" minWidth="200.0" prefWidth="-1.0" sortable="false" text="TIME &amp; NUMBER FORMAT">
+                           <columns>
+                              <TableColumn fx:id="m_totime_javaformat" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="-1.0" sortable="false" text="totime_javaformat" />
+                              <TableColumn fx:id="m_totime" maxWidth="1.7976931348623157E308" minWidth="345.0" prefWidth="-1.0" sortable="false" text="totime" />
+                              <TableColumn fx:id="m_timetochar" maxWidth="1.7976931348623157E308" minWidth="310.0" prefWidth="-1.0" sortable="false" text="timetochar" />
+                              <TableColumn fx:id="m_numbertochar" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" sortable="false" text="numbertochar" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="m_groupby" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" sortable="false" text="groupby" />
+                        <TableColumn fx:id="m_summarization" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0" sortable="false" text="summarization" />
+                        <TableColumn fx:id="m_exclude_condition" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0" sortable="false" text="exclude_condition" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="metaDataMenu">
+                          <items>
+                              <MenuItem fx:id="metaAdd" mnemonicParsing="false" onAction="#handle_AddVariable" text="Add Variable" />
+                              <Menu fx:id="metaDeleteMenu" mnemonicParsing="false" text="Delete Variable...">
+                                <items>
+                                  <MenuItem fx:id="metaDelete" mnemonicParsing="false" onAction="#handle_mouse_metaDelete" text="Selected Variable" />
+                                  <MenuItem fx:id="metaAllLinkedDelete" mnemonicParsing="false" onAction="#handle_mouse_metaAllLinkedDelete" text="All Linked Variables" />
+                                </items>
+                              </Menu>
+                              <SeparatorMenuItem fx:id="metaSepMenu" mnemonicParsing="false" />
+                              <Menu fx:id="metaCopyMenu" mnemonicParsing="false" text="Copy to...">
+                                <items>
+                                  <MenuItem fx:id="metaCopyToNext" mnemonicParsing="false" onAction="#handle_mouse_metaCopyToNext" text="NEXTATTRIBUTE" />
+                                    <MenuItem fx:id="metaCopyToContext" mnemonicParsing="false" onAction="#handle_mouse_metaCopyToContext" text="CONTEXTLIST" />
+                                </items>
+                              </Menu>
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <ToolBar maxHeight="30.0" maxWidth="1.7976931348623157E308" minWidth="25.0" nodeOrientation="LEFT_TO_RIGHT">
+        <items>
+            <Label maxWidth="500.0" minWidth="165.0" />
+            <TextField fx:id="serachColumnField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="200.0" promptText="Search Column (METADATA)">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="70.0" mnemonicParsing="false" onAction="#handle_searchColumn" text="Search" />
+            <Label maxHeight="1.7976931348623157E308" maxWidth="80.0" minWidth="40.0" />
+            <TextField fx:id="timeFormatField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="350.0" promptText="TO_CHAR(@VALUE,'YYYY-MM-DD HH24:MI:SS.FF3')">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <ComboBox fx:id="timeFormatSelectedCombo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="200.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </ComboBox>
+            <Button fx:id="timeFormatChangeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="165.0" mnemonicParsing="false" onAction="#handle_timeFormatChange" text="Time Format Change">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="40.0" />
+            <Button fx:id="addVariableButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" mnemonicParsing="false" onAction="#handle_AddVariable" text="Add DFSVariable">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="deleteVariableButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="140.0" mnemonicParsing="false" onAction="#handle_deleteVariable" text="DELETE DFSVariable">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="40.0" />
+            <Button fx:id="OK_Button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" mnemonicParsing="false" onAction="#handle_OK" text="OK" />
+            <Button fx:id="Cancel_Button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" mnemonicParsing="false" onAction="#handle_Cancel" text="Cancel" />
+        </items>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </ToolBar>
+   </children>
+</VBox>

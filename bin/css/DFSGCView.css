@@ -1,0 +1,179 @@
+
+
+.titled-pane
+{ -fx-background-color: #FFFFFF;
+    -fx-text-fill: white;
+    /*-fx-font-size: 25px robot;*/
+    -fx-background-radius: 0;
+  /*  -fx-font-weight:bold;
+     -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;*/
+}
+
+
+.titled-pane .title 
+{
+	/*-fx-font-size: 25px robot;*/
+	-fx-text-fill: white;
+	-fx-background-radius: 0;
+	-fx-background-color:  #00CED1;
+	-fx-font-weight:bold;
+	-fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+
+.titled-pane  .title > .arrow-button 
+{
+	-fx-background-color: transparent;
+}
+
+.titled-pane  .title > .arrow-button .arrow 
+{
+	-fx-focus-color: #0093ff;
+    -fx-background-color:  #FFFFFF;
+}
+
+.titled-pane  .title > .arrow-button .arrow:focus
+{
+	/*-fx-font-size: 25px robot;*/
+	-fx-text-fill:  #0093ff;
+	-fx-focus-color: #0093ff;
+    -fx-background-color:  #0093ff;
+}
+
+.table-view {
+    -fx-base: #D8D8D8;  /* #d0e2f9; */
+    -fx-control-inner-background:  #FFFFFF; /*cell background */
+    -fx-background-color: #FFFFFF; /*base color */
+    -fx-border-color:  #67e4de; /* #aecdf5; */
+    -fx-padding: 0.5,0.5,0.5,0.5;
+ 	-fx-border-width: 1, 1,1,1;
+    
+    /*-fx-selection-bar-non-focused: #008287 ;*/
+}
+
+.table-view:focused {
+        -fx-border-color: -fx-focus-color, -fx-faint-focus-color;
+}
+
+.table-view .column-header {
+    /*-fx-background-color: #00ced1;*/
+    -fx-background-color: #00CED1;
+    -fx-size: 25px;
+    /*-fx-font-size: 13px;*/
+    -fx-border-width: .3 .3 .3 .3;
+    -fx-border-color: #A1A1A1;
+     -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    /*-fx-text-fill:  #1d1d1d;*/
+}
+
+.table-view /*> column-header-background > nested-column-header >*/ .arrow
+{
+	-fx-background-color: #FFFFFF;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .cell:hover {
+  -fx-background-color: #5787f4  ;
+     -fx-opacity: 0.6;
+}
+
+
+.table-view .column-header .label {
+   -fx-font-size: 13px;
+    -fx-font-weight:bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+
+
+/***** INDIVIDUAL CELLS ********************************************************/
+
+.table-view .table-row-cell:selected {
+   -fx-text-background-color: #FFFFFF;
+}
+
+.table-view:constrained-resize > .virtual-flow > .clipped-container > .sheet > .table-row-cell > .table-cell:last-visible
+{
+    -fx-border-color: transparent;
+}
+
+.table-view .column-resize-line {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-background;
+    -fx-padding: 0.0em 0.0416667em 0.0em 0.0416667em; /* 0 0.571429 0 0.571429 */
+}
+/* This is the area behind the column headers. An ideal place to specify background
+   and border colors for the whole area (not individual column-header's). */
+.table-view .column-header-background {
+    -fx-background-color: -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1;
+}
+
+.table-view:constrained-resize .filler {
+    -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 0 1 1 0, 1 2 2 1;
+    -fx-font-weight: bold;
+    -fx-size: 2em;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0.166667em;
+}
+
+
+.check-box {
+    -fx-label-padding: 0.0em 0.0em 0.0em 0.416667em; /* 0 0 0 5 */
+    -fx-text-fill: -fx-text-background-color;
+
+}
+.check-box > .box {
+	-fx-background-color:   #FFFFFF, #B9B9B9 #FFFFFF, -fx-body-color ;
+    -fx-background-radius: 3, 2, 1;
+    -fx-padding: 0.166667em 0.166667em 0.25em 0.25em; /* 2 2 3 3 */
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #00c9cc;
+}
+
+.check-box:focused > .box {
+    -fx-border-color: -fx-focus-color, -fx-faint-focus-color;
+    -fx-border-radius: 3, 2, 1;
+    -fx-padding: 2,2,3,3; /* 2 2 3 3 */
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 0.416667em 0.416667em 0.5em 0.5em; /* 5 5 6 6 */
+    -fx-shape: "M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+}
+
+
+
+.check-box:hover > .box {
+    -fx-color:   #00c9cc;
+    -fx-opacity: 0.5;
+}
+/*.check-box .box {
+
+-fx-background-color: white;
+-fx-border-color:grey;
+-fx-border-radius:3px; 
+
+}*/
+
+/*.check-box:selected .mark {
+
+-fx-background-color: white;
+
+}
+
+.check-box:selected .box {
+
+-fx-background-color: #28a3f4;
+}*/

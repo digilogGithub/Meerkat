@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database name="tempDB" value="">
+	<item name="DRIVER_CLASS_NAME" value="oracle.jdbc.driver.OracleDriver" type="" />
+	<item name="URL" value="jdbc:oracle:thin:@localhost:port:sid" type="" />
+	<item name="USER_NAME" value="tempUser" type="" />
+	<item name="PASSWORD" value="CLNnTtU4nDo+n2yg+383vbbsP6BdhbbK" type="PASSWORD" />
+	<item name="CONNECTION_INITIAL_SIZE" value="10" type="" />
+	<item name="CONNECTION_MIN_IDLE" value="0" type="" />
+	<item name="CONNECTION_MAX_IDLE" value="75" type="" />
+	<item name="CONNECTION_MAX_ACTIVE" value="100" type="" />
+	<item name="CONNECTION_MAX_WAIT" value="10000" type="" />
+	<item name="TEST_ON_BORROW" value="true" type="" />
+	<item name="TEST_ON_RETURN" value="false" type="" />
+	<item name="TEST_WHILE_IDLE" value="false" type="" />
+	<item name="VALIDATION_INTERVAL" value="30000" type="" />
+	<item name="VALIDATION_QUERY" value="SELECT 1 FROM DUAL" type="" />
+	<item name="REMOVE_ABANDONED" value="true" type="" />
+	<item name="REMOVE_ABANDONED_TIMEOUT" value="600000" type="" />
+	<item name="LOG_ABANDONED" value="true" type="" />
+	<item name="MIN_EVICTABLE_IDLE_TIME_MILLIS" value="300000" type="" />
+	<item name="TIME_BETWEEN_EVICTION_RUNS_MILLIS" value="30000" type="" />
+	<item name="JMX_ENABLED" value="true" type="" />
+	<item name="JDBC_INTERCEPTORS" value="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer" type="" />
+</database>

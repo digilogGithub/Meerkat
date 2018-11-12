@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<eDataRealm>
+	<!-- Realm General Configuration -->
+	<item name="REALM_INSTANCE" value="com.bistel.edr.realm.DefaultDataRealm" type="" />
+	<item name="INTERFACE_PROVIDER" value="com.bistel.edr.realm.DefaultRealmInterfaceProvider" type="" />	
+	<item name="APPLICATION_PROVIDER" value="com.bistel.edr.realm.DefaultApplicationProvider" type="" />
+	<item name="ENCODING" value="UTF-8" type="" />
+	<item name="REPOSITORY" value="com.bistel.edr.repository.postgreSQL.PostgreSQLRepositoryManager" type="">
+		<item name="INSTANCE_MANAGER" value="com.bistel.edr.repository.postgreSQL.PostgreSQLInstanceManager" type="" />
+		<item name="DATALOAD_MANAGER" value="com.bistel.edr.repository.postgreSQL.PostgresDataLoadManager" type="" />
+		<item name="PG_DUMP" value="C:\Program Files\PostgreSQL\9.6\bin\pg_dump" type="FILE" />
+		<item name="PG_RESTORE" value="C:\Program Files\PostgreSQL\9.6\bin\pg_restore" type="FILE" />
+		<item name="PG_NUMBER_OF_JOBS" value="3" type="" />
+		<item name="TEMPPATH" value="%appdata%\BISTel\eDataRealm\Temp\" type="PATH" />
+		<item name="MAXIMUM_COLUMNNAME_LENGTH" value="60" type="" />
+		<item name="COMMIT_COUNT" value="100000" type="" />
+		<item name="FETCHSIZE" value="100000" type="" />		
+		<item name="DRIVER_CLASS_NAME" value="org.postgresql.Driver" type="" />
+		<item name="URL" value="jdbc:postgresql://127.0.0.1:5432" type="" />
+		<item name="IP_ADDRESS" value="127.0.0.1" type="" />
+		<item name="PORT" value="5432" type="" />
+		<item name="DBNAME" value="postgres" type="" />
+		<item name="USER_NAME" value="postgres" type="" />
+		<item name="PASSWORD" value="ANXStzSOsNT6Iu9SVQT1ebDRNPsQU3bh" type="PASSWORD" />
+		<item name="CONNECTION_MIN_IDLE" value="0" type="" />
+		<item name="CONNECTION_MAX_IDLE" value="0" type="" />
+		<item name="CONNECTION_MAX_ACTIVE" value="50" type="" />
+		<item name="CONNECTION_MAX_WAIT" value="10000000" type="" />
+		<item name="TEST_ON_BORROW" value="true" type="" />
+		<item name="TEST_ON_RETURN" value="false" type="" />
+		<item name="TEST_WHILE_IDLE" value="false" type="" />
+		<item name="VALIDATION_INTERVAL" value="30000" type="" />
+		<item name="VALIDATION_QUERY" value="SELECT 1" type="" />
+		<item name="REMOVE_ABANDONED" value="true" type="" />
+		<item name="REMOVE_ABANDONED_TIMEOUT" value="600000" type="" />
+		<item name="LOG_ABANDONED" value="true" type="" />
+		<item name="MIN_EVICTABLE_IDLE_TIME_MILLIS" value="300000" type="" />
+		<item name="TIME_BETWEEN_EVICTION_RUNS_MILLIS" value="30000" type="" />
+		<item name="JMX_ENABLED" value="true" type="" />
+		<item name="JDBC_INTERCEPTORS" value="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer" type="" />
+		<item name="INITIAL_QUERY" value="CREATE EXTENSION IF NOT EXISTS tablefunc" type="" />
+		<item name="DB_EXIST_QUERY" value="SELECT DATNAME FROM pg_catalog.pg_database WHERE DATNAME = '@DBNAME'" type="" />
+	</item>
+	<!-- RealmService Configuration -->
+	<item name="REALM_SERVICE" value="com.bistel.edr.realmservice.socket.SocketService" type="">
+		<item name="REALM_THREAD_MAX" value="50" type="" />
+		<item name="SOCKET_PORT" value="28000" type="" />
+		<item name="SERVICE_VERSION_MANAGER" value="VERSIONMANAGER" type="" />
+	</item>
+	<!-- Master Configuration List -->
+	<item name="MASTER_CONFIGURATIONS" value="SEMI" type="">
+		<item name="SEMI" value="%appdata%\BISTel\eDataRealm\conf\MasterConfig\SEMIMasterConfig.xml" type="FILE" />
+	</item>
+	<!-- Data Fullfiller and Summarizer -->
+	<item name="DFS" value="" type="">
+		<item name="DATA_CRAWLER" value="PoCDB" type="">
+			<item name="PoCDB" value="com.bistel.edr.dfs.gatherer.CSVFileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="" type="FILE" />
+			</item>
+		</item>
+		<item name="DATA_GATHERER" value="CSV,KLARF,STDF,IM,YMA_1_0,YMA_1_1" type="">
+			<item name="CSV" value="com.bistel.edr.dfs.gatherer.CSVFileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="" type="FILE" />
+			</item>
+			<item name="KLARF" value="com.bistel.edr.dfs.gatherer.KLARFFileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\DFSConfig\KLARFGatherer.xml" type="FILE" />
+			</item>
+			<item name="STDF" value="com.bistel.edr.dfs.gatherer.STDFFileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\DFSConfig\STDFGatherer.xml" type="FILE" />
+			</item>
+			<item name="IM" value="com.bistel.edr.dfs.gatherer.IMFormatFileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="" type="FILE" />
+			</item>
+			<item name="YMA_1_0" value="com.bistel.edr.dfs.gatherer.YMA10FileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="" type="FILE" />
+			</item>
+			<item name="YMA_1_1" value="com.bistel.edr.dfs.gatherer.YMA11FileGatherer" type="FILE_DFS" >
+				<item name="CONFIG_FILE_PATH" value="" type="FILE" />
+			</item>
+		</item>
+		<item name="DATA_SUMMARIZER" value="" type="">
+		</item>
+		<item name="REPLACE_MISSING_VALUE_IN_CONTEXT_AND_DESCRIPTOR" value="true">
+			<item name="NULL_REPLACE" value="NULL" />
+			<item name="EMPTY_STRING_REPLACE" value="EMPTY" />
+		</item>
+	</item>
+	<!-- Application Engine Configuration -->
+	<item name="APPLICATION" value="R2R,FORMULA,OUTLIER,VIRTUALPARAMETER,basicStat,LINEARREGRESSION,MOVINGAVERAGE,normalRVGeneration,INTELLIMINE,MAPUTILITY,XMA,YMA,SUMMARYREPORT,imOutlierClassification,imAutoFocus,LINEARCORRELATION,ANOVA,TRACE_ANALYTIC,CONTEXTLISTSAMPLER,VERSIONMANAGER,DATASUMMARY,MAPATTERN" type="">
+		<item name="R2R" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\R2REngineConfig.xml" type="FILE" />
+		</item>
+		<item name="FORMULA" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\FormulaEngineConfig.xml" type="FILE" />
+		</item>
+		<item name="OUTLIER" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\OutlierEngineConfig.xml" type="FILE" />
+		</item>
+		<item name="VIRTUALPARAMETER" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\VirtualParameterEngine.xml" type="FILE" />
+		</item>
+		<item name="basicStat" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\BasicStatConfig.xml" type="FILE" />
+		</item>
+		<item name="LINEARREGRESSION" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\JLinearRegressionConfig.xml" type="FILE" />
+		</item>
+		<item name="MOVINGAVERAGE" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\MovingAverageConfig.xml" type="FILE" />
+		</item>
+		<item name="normalRVGeneration" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\NormalRVGenerationConfig.xml" type="FILE" />
+		</item>
+		<item name="INTELLIMINE" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\IntellimineConfig.xml" type="FILE" />
+		</item>
+		<item name="MAPUTILITY" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\MapUtility.xml" type="FILE" />
+		</item>
+		<item name="XMA" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\XMAConfig.xml" type="FILE" />
+		</item>
+		<item name="YMA" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\YMAConfig.xml" type="FILE" />
+		</item>
+		<item name="SUMMARYREPORT" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\SummaryReportConfig.xml" type="FILE" />
+		</item>
+		<item name="imOutlierClassification" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\IMOutlierClassificationConfig.xml" type="FILE" />
+		</item>
+		<item name="imAutoFocus" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\IMAutoFocusConfig.xml" type="FILE" />
+		</item>
+		<item name="LINEARCORRELATION" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\LinearCorrelationConfig.xml" type="FILE" />
+		</item>
+		<item name="ANOVA" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\ANOVAConfig.xml" type="FILE" />
+		</item>
+		<item name="TRACE_ANALYTIC" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\TraceAnalyticConfig.xml" type="FILE" />
+		</item>
+		<item name="CONTEXTLISTSAMPLER" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\ContextListSamplerConfig.xml" type="FILE" />
+		</item>
+		<item name="VERSIONMANAGER" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\VersionManagerConfig.xml" type="FILE" />
+		</item>
+		<item name="DATASUMMARY" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\DataSummaryConfig.xml" type="FILE" />
+		</item>
+		<item name="MAPATTERN" value="" type="">
+			<item name="CONFIG_FILE_PATH" value="%appdata%\BISTel\eDataRealm\conf\Application\MaPatternConfig.xml" type="FILE" />
+		</item>
+	</item>
+	<item name="DBINFO" value="" type="">
+	</item>
+	<item name="POST_PROCESS" value="CONTEXTLISTSAMPLER" type="" >
+		<item name="CONTEXTLISTSAMPLER" value="" type="" >
+			<item name="SetContextCriteria" value="" type="" />
+			<item name="ImportFileData" value="" type="" />
+		</item>
+	</item>
+</eDataRealm>
+

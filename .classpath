@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/POC/eclipse-workspace/Meerkat/extLib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/POC/eclipse-workspace/Meerkat/extLib/commons-dbcp2-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/POC/eclipse-workspace/Meerkat/extLib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/POC/eclipse-workspace/Meerkat/extLib/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/POC/eclipse-workspace/Meerkat/extLib/ojdbc6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
