@@ -6,8 +6,20 @@
       <root url="jar://$PROJECT_DIR$/extLib/ojdbc6.jar!/" />
       <root url="jar://$PROJECT_DIR$/extLib/commons-pool2-2.4.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/extLib/commons-dbcp2-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/extLib/jaxb-api-2.2.3.jar!/" />
+      <root url="file:///Library/Java/Extensions/javafx-sdk-11.0.1/lib" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <NATIVE>
+      <root url="file:///Library/Java/Extensions/javafx-sdk-11.0.1/lib" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file:///Library/Java/Extensions/javafx-sdk-11.0.1/lib" />
+    </SOURCES>
+    <excluded>
+      <root url="jar://$PROJECT_DIR$/extLib/jaxb-api-2.2.3.jar!/" />
+    </excluded>
+    <jarDirectory url="file:///Library/Java/Extensions/javafx-sdk-11.0.1/lib" recursive="false" />
+    <jarDirectory url="file:///Library/Java/Extensions/javafx-sdk-11.0.1/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
